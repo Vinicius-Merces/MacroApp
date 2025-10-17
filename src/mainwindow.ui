@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>900</width>
+    <height>650</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MacroApp Professional</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #2d2d30, stop: 1 #1e1e1e);
+    color: white;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QGroupBox" name="controlGroup">
+      <property name="minimumSize">
+       <size>
+        <width>300</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>350</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>Controles</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QPushButton" name="recordButton">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #dc2626, stop: 1 #b91c1c);
+    border: 2px solid #f87171;
+    border-radius: 10px;
+    padding: 12px;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+}
+QPushButton:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #ef4444, stop: 1 #dc2626);
+}
+QPushButton:pressed {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #b91c1c, stop: 1 #991b1b);
+}</string>
+         </property>
+         <property name="text">
+          <string>🎤 Iniciar Gravação (Ctrl+S)</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="stopButton">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #475569, stop: 1 #334155);
+    border: 2px solid #64748b;
+    border-radius: 10px;
+    padding: 12px;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+}
+QPushButton:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #64748b, stop: 1 #475569);
+}</string>
+         </property>
+         <property name="text">
+          <string>⏹️ Parar Gravação (Ctrl+P)</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="playButton">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #059669, stop: 1 #047857);
+    border: 2px solid #10b981;
+    border-radius: 10px;
+    padding: 12px;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+}
+QPushButton:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #10b981, stop: 1 #059669);
+}</string>
+         </property>
+         <property name="text">
+          <string>▶️ Reproduzir Macro</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="saveButton">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #2563eb, stop: 1 #1d4ed8);
+    border: 2px solid #3b82f6;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #3b82f6, stop: 1 #2563eb);
+}</string>
+         </property>
+         <property name="text">
+          <string>💾 Salvar Macro</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="loadButton">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #7c3aed, stop: 1 #6d28d9);
+    border: 2px solid #8b5cf6;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #8b5cf6, stop: 1 #7c3aed);
+}</string>
+         </property>
+         <property name="text">
+          <string>📂 Carregar Macro</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="clearButton">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #d97706, stop: 1 #b45309);
+    border: 2px solid #f59e0b;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #f59e0b, stop: 1 #d97706);
+}</string>
+         </property>
+         <property name="text">
+          <string>🗑️ Limpar Tudo</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>30</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="settingsGroup">
+         <property name="title">
+          <string>Configurações</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="0" column="0" colspan="2">
+           <widget class="QCheckBox" name="recordKeyboardCheckbox">
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+            <property name="text">
+             <string>⌨️ Gravar Teclado</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0" colspan="2">
+           <widget class="QCheckBox" name="recordMouseCheckbox">
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+            <property name="text">
+             <string>🐭 Gravar Mouse</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0" colspan="2">
+           <widget class="QCheckBox" name="humanizeCheckbox">
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+            <property name="text">
+             <string>🎭 Humanizar (Variação)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="repsLabel">
+            <property name="text">
+             <string>🔄 Repetições:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLineEdit" name="repsEdit">
+            <property name="text">
+             <string>1</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="varMaxLabel">
+            <property name="text">
+             <string>🎲 Variação Máx:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QLineEdit" name="varMaxEdit">
+            <property name="text">
+             <string>0.1</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="actionsGroup">
+      <property name="title">
+       <string>Ações Gravadas</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QListWidget" name="actionList">
+         <property name="styleSheet">
+          <string notr="true">QListWidget {
+    background-color: #1e1e1e;
+    border: 2px solid #565656;
+    border-radius: 8px;
+    color: white;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 11px;
+    outline: none;
+}
+QListWidget::item {
+    padding: 8px;
+    border-bottom: 1px solid #3f3f46;
+    background-color: #2d2d30;
+}
+QListWidget::item:selected {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #2a82da, stop: 1 #1e6fbb);
+    border: 1px solid #3b82f6;
+    border-radius: 4px;
+}
+QListWidget::item:hover {
+    background-color: #3f3f46;
+}</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

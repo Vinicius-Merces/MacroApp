@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <!-- APENAS os ícones que realmente existem -->
+        <file>icons/app_icon.ico</file>
+        <file>icons/app_icon.png</file>
+        <file>icons/logo.png</file>
+    </qresource>
+</RCC>
